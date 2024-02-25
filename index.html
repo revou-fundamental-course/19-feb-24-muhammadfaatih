@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Company Profile</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <img src="" alt="Logo">
+        <ul class="navigation">
+            <li>Home</li>
+            <li>Our Products</li>
+            <li>Message</li>
+        </ul>
+    </header>
+    
+    <main>
+        <div class="home">
+            <h1>Hi User, Welcome to My Website</h1>
+            <h3>Perusahaan ini bergerak di bidang penjualan pakaian dengan harga mulai dari Rp. 0 sampai Rp. 1</h3>
+            <img src="assets/banner.jpg" alt="Banner">
+        </div>
+
+        <div class="our-product">
+            <h2>Our Products</h2>
+            <div>
+                <div class="circle-image" style="background-image: url('assets/carousel1.jpg');"></div>
+                <h5>Product 1</h5>
+            </div>
+            <div>
+                <div class="circle-image" style="background-image: url('assets/carousel2.jpg');"></div>
+                <h5>Product 2</h5>
+            </div>
+            <div>
+                <div class="circle-image" style="background-image: url('assets/carousel3.jpg');"> </div>
+                <h5>Product 3</h5>
+        </div>
+
+        <div class="message-box">
+            <h2>Message Me</h2>
+            <form class="message-form">
+                <label for="name">Nama</label>
+                <input type="text" id="name" name="name">
+
+                <label for="birth-date">Tanggal Lahir</label>
+                <input type="date" id="birth-date">
+
+                <label for="gender">Jenis Kelamin</label>
+                <select id="gender">
+                    <option value="male">Laki-laki</option>
+                    <option value="female">Perempuan</option>
+                </select>
+
+                <label for="msg">Pesan</label>
+                <textarea id="msg" rows="4" columns="50"></textarea>
+                <input type="submit" value="submit">
+            </form>
+
+            <div class="output">
+                <!-- add output-->
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
