@@ -9,14 +9,8 @@
 </head>
 <body>
     <header class="header-wrapper">
-        <img src="assets/logo.png" class="logo"  height="200px" width="200px" alt="Logo">
+        <img src="assets/logo.png" class="logo"  height="250px" width="250px" alt="Logo">
         <nav>
-            <!--<div class="menu">
-                <button>Home</button>
-                <button>My Profile</button>
-                <button>Our Products</button>
-                <button>Message</button>
-            </div>-->
             <ul class="menu">
                 <li><a href="#">Home</a></li>
                 <li><a href="#home">Profile</a></li>
@@ -25,15 +19,15 @@
             </ul>
         </nav>
     </header>
-    
+    <hr>
     <main>
         <div id="content">
             <div class="home card" id="home">
                 <h1>Hi <span id="visitor"> </span>, Welcome to My Website (^-^)/</h1>
                 
                 <img src="assets/banner1.jpg" alt="Banner" class="banner image-slideshow">
-                <img src="assets/banner2.jpg" alt="Banner" class="banner image-slideshow">
-                <img src="assets/banner3.jpg" alt="Banner" class="banner image-slideshow">
+                <img src="assets/banner2.png" alt="Banner" class="banner image-slideshow">
+                <img src="assets/banner3.png" alt="Banner" class="banner image-slideshow">
                 <!--<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
                 <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
                 <button onclick="plusDivs(-1)">&#10094;</button>
@@ -57,6 +51,11 @@
                       }
                       x[slideIndex-1].style.display = "block";  
                     }
+
+                    setInterval(() => {
+                        plusDivs(1);
+                    }, 3000);
+
                 </script>
 
                 <br />
@@ -87,8 +86,7 @@
                 <form class="message-form" name="message-form" onsubmit="return validateForm()">
                     <table>
                         <tr>
-                            <th><h2>Message Us</h2></th>
-                            <td></td>
+                            <th class="msg_us"><h2>Kritik dan Saran</h2></th>
                             <br />
                         </tr>
                         <tr>
@@ -104,7 +102,10 @@
                         <tr>
                             <td>
                                 <label for="date">
-                                    Tanggal Lahir : <input type="date" name="birth-date">
+                                    Tanggal Lahir : <!--<input type="date" name="birth-date">-->
+                                    <input type="date" name="birth-date"
+                                    placeholder="dd-mm-yyyy" value=""
+                                    min="1970-01-01" max="2030-12-31">
                                 </label>
                                 <br />        
                             </td>
@@ -114,10 +115,10 @@
                             <td>
                                 <label for="gender" required>
                                     Jenis Kelamin : 
-                                    <input type="radio" id="male" name="gender" value="male">
-                                    <label for="male">Laki-laki</label>
-                                    <input type="radio" id="female" name="gender" value="female">
-                                    <label for="female">Perempuan</label>
+                                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                                    <label for="Laki-laki">Laki-laki</label>
+                                    <input type="radio" id="female" name="gender" value="Perempuan">
+                                    <label for="Perempuan">Perempuan</label>
                                 </label> 
                                 <br />
                             </td>
@@ -133,7 +134,7 @@
 
                         <tr>
                             <td>
-                                <button id="kirim" type="submit">Kirim</button>
+                                <button id="kirim" type="submit" onclick="sendAlert()">Kirim</button>
                                 <!--<input type="submit" value="Submit">-->
                             </td>
                         </tr>
@@ -141,6 +142,8 @@
                         <script src="js/script.js"></script>
                     </table>
                 </form>
+
+                <div class="space"></div>
 
                 <div class="output">
                     <!-- add output-->
@@ -157,6 +160,10 @@
             </div>
         </div>
     </main>
+    
+    <footer>
+        <p>Official Online Shop &#169; 2024, Muhammad Faatih H</p>
+    </footer>
 
 </body>
 </html>

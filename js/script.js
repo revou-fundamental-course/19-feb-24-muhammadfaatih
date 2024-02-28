@@ -30,4 +30,14 @@ function setSenderUI(name, birthDate, gender, messages) {
     document.getElementById("sender-birth-date").innerHTML = birthDate;
     document.getElementById("sender-gender").innerHTML = gender;
     document.getElementById("sender-messages").innerHTML = messages;
+
+    alert("Terima kasih atas saran dan masukannya :)\n\n " + 
+    "\"Kami tidak pernah meragukan pelanggan \n " +  
+             "Meskipun permintaannya aneh-aneh\" "); 
+    return false;
+
 }
+
+function myalert() { 
+
+} 
