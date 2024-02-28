@@ -1,44 +1,33 @@
-
 //prompt("Halo, siapakah nama anda?", "User")
-/*
-function replaceName() {
-    let name = prompt("Halo, siapakah nama anda?", "");
-    document.getElementById("visitor").innerHTML = name;
+function replaceName(){
+    let visitor = prompt("Selamat datang, pengunjung. Silahkan masukkan nama anda...");
+    document.getElementById("visitor").innerHTML = visitor;
+
 }
 
-document.getElementById("change_name").addEventListener("click", function() {
-    replaceName();
-})
+replaceName()
 
-let nameInput = document.getElementById('name-input');
-
-document.getElementById('kirim').addEventListener("click", function() {
-    const nama = nameInput.value;
-
-    if(nama == ""){
-        document.getElementById("error-name").innerHTML = "Nama tidak boleh kosong!";
-    }else{
-        document.getElementById('name').innerHTML = nama;
-    }  
-})
-*/
-
+//function validateForm
 function validateForm() {
-    const nama = document.forms['message-form']['name-input'].value;
+    const name = document.forms["message-form"]["full-name"].value;
+    const birthDate = document.forms["message-form"]["birth-date"].value;
+    const gender = document.forms["message-form"]["gender"].value;
+    const messages = document.forms["message-form"]["messages"].value;
 
-    if(nama = ""){
-        document.getElementById("error-name").innerHTML = "Tidak boleh kosong!";
+    if(name == "" || birthDate == "" || gender == "" || messages == ""){
+        alert("Tidak boleh ada yang kosong");
+        //document.getElementById("error-name").innerHTML = "Tidak boleh kosong!";
         return false;
     }
 
-    setName(nama);
+    setSenderUI(name, birthDate, gender, messages);
 
-    //document.getElementById("name").innerHTML = nama;
-    //document.getElementById("error-name").innerHTML = "";
     return false;
 }
 
-function setName(name) {
-    document.getElementById("name").innerHTML = name;
-    document.getElementById("error-name").innerHTML = "";
+function setSenderUI(name, birthDate, gender, messages) {
+    document.getElementById("sender-full-name").innerHTML = name;
+    document.getElementById("sender-birth-date").innerHTML = birthDate;
+    document.getElementById("sender-gender").innerHTML = gender;
+    document.getElementById("sender-messages").innerHTML = messages;
 }

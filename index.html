@@ -8,67 +8,152 @@
     <link rel="icon" type="image/x-icon" href="assets/logo.png">
 </head>
 <body>
-    <header>
-        <img src="assets/logo.png" width="100px" height="100px" alt="Logo">
+    <header class="header-wrapper">
+        <img src="assets/logo.png" class="logo"  height="200px" width="200px" alt="Logo">
         <nav>
-            <ul class="navigation">
+            <!--<div class="menu">
+                <button>Home</button>
+                <button>My Profile</button>
+                <button>Our Products</button>
+                <button>Message</button>
+            </div>-->
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
                 <li><a href="#home">Profile</a></li>
-                <li><a href="#our-product">Products</a></li>
+                <li><a href="#our-product">Our Products</a></li>
                 <li><a href="#message-box">Message</a></li>
             </ul>
         </nav>
     </header>
     
     <main>
-        <div class="home card" id="home">
-            <h1>Hi <span id="visitor">-</span>, Welcome to My Website</h1>
-            <script src="js/script.js"></script>
-            <img src="assets/banner.jpg" alt="Banner" class="banner">
-            <p>Perusahaan ini bergerak di bidang penjualan pakaian dengan harga mulai dari Rp. 0 sampai Rp. 1. Selain menyediakan pakaian dengan harga murah, kami juga menyediakan jasa franchise baju.</p>
-            <p>Dan yang lebih spesial lagi, dapatkan promo sebesar 99% dari harga awal produk. Jangan lewatkan kesempatan emas ini...</p>
-            <h6>*syarat dan ketentuan berlaku</h6>
-        </div>
+        <div id="content">
+            <div class="home card" id="home">
+                <h1>Hi <span id="visitor"> </span>, Welcome to My Website (^-^)/</h1>
+                
+                <img src="assets/banner1.jpg" alt="Banner" class="banner image-slideshow">
+                <img src="assets/banner2.jpg" alt="Banner" class="banner image-slideshow">
+                <img src="assets/banner3.jpg" alt="Banner" class="banner image-slideshow">
+                <!--<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>-->
+                <button onclick="plusDivs(-1)">&#10094;</button>
+                <button onclick="plusDivs(1)">&#10095;</button>
 
-        <div class="our-product card" id="our-product">
-            <h2>Our Products</h2>
-            <div>
-                <div class="circle-image" style="background-image: url('assets/carousel1.jpg');"></div>
-                <h5>Product 1</h5>
+                <script>
+                    var slideIndex = 1;
+                    showDivs(slideIndex);
+                    
+                    function plusDivs(n) {
+                      showDivs(slideIndex += n);
+                    }
+                    
+                    function showDivs(n) {
+                      var i;
+                      var x = document.getElementsByClassName("image-slideshow");
+                      if (n > x.length) {slideIndex = 1}
+                      if (n < 1) {slideIndex = x.length}
+                      for (i = 0; i < x.length; i++) {
+                        x[i].style.display = "none";  
+                      }
+                      x[slideIndex-1].style.display = "block";  
+                    }
+                </script>
+
+                <br />
+
+                <p>Perusahaan ini bergerak di bidang penjualan pakaian dengan harga murah meriah. Pakaian ini produksi dari pabrik konveksi lokal dan bahan dari sumber lokal. Karena kami juga memiliki prinsip memajukan UMKM lokal yang ada di Indonesia. Walaupun lokal, tenang yaa guys, harganya murah dimulai dari Rp. 0 sampai Rp. 1. Selain menyediakan pakaian dengan harga murah, kami juga menyediakan jasa franchise baju.</p>
+                <p>Kami menyediakan berbagai jenis pakaian, mulai dari outfit sehari-hari, dress, maupun baju santai untuk sehari-hari lohh. Stylenya dijamin zaman now banget, dan bisa dijadiin foto OOTD dan dipost di IG story atau buat pamer ke teman ataupun mantan. Untuk ukuran pakaiannya pun ada mulai dari yang seukuran semut sampai yang seukuran bumi, dijamin anda tidak akan kecewa. Kalau tidak sesuai, bisa diretur sampai benar benar cocok di badan kalian ygy ^^</p>
+                <p>Dan yang lebih spesial lagi, dapatkan promo sebesar 99% dari harga awal produk. Jangan lewatkan kesempatan emas ini...</p>
+                <p><sub>*syarat dan ketentuan berlaku</sub></p>
             </div>
-            <div>
-                <div class="circle-image" style="background-image: url('assets/carousel2.jpg');"></div>
-                <h5>Product 2</h5>
+
+            <div class="our-product card" id="our-product">
+                <h2>Our Products</h2>
+                <div>
+                    <div class="circle-image" style="background-image: url('assets/carousel1.jpg');"></div>
+                    <h5>Product 1</h5>
+                </div>
+                <div>
+                    <div class="circle-image" style="background-image: url('assets/carousel2.jpg');"></div>
+                    <h5>Product 2</h5>
+                </div>
+                <div>
+                    <div class="circle-image" style="background-image: url('assets/carousel3.jpg');"> </div>
+                    <h5>Product 3</h5>
+                </div>
             </div>
-            <div>
-                <div class="circle-image" style="background-image: url('assets/carousel3.jpg');"> </div>
-                <h5>Product 3</h5>
-            </div>
-        </div>
 
-        <div class="message-box card" id="message-box">
-            <h2>Message Me</h2>
-            <form class="message-form" name="message-form" onsubmit="return validateForm()">
-                <label for="name">Nama</label>
-                <input type="text" id="name-input" name="name" placeholder="Masukkan nama anda..." required>
+            <div class="message-box card" id="message-box">
+                <form class="message-form" name="message-form" onsubmit="return validateForm()">
+                    <table>
+                        <tr>
+                            <th><h2>Message Us</h2></th>
+                            <td></td>
+                            <br />
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="name"> Nama &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;:
+                                    <input type="text" placeholder="Silahkan masukkan nama anda..." name="full-name" id="full-name" size="36">
+                                </label>
+                                <br />
+                            </td>
+                            
+                        </tr>
 
-                <label for="birth-date">Tanggal Lahir</label>
-                <input type="date" id="birth-date">
+                        <tr>
+                            <td>
+                                <label for="date">
+                                    Tanggal Lahir : <input type="date" name="birth-date">
+                                </label>
+                                <br />        
+                            </td>
+                        </tr>
 
-                <label for="gender">Jenis Kelamin</label>
+                        <tr>
+                            <td>
+                                <label for="gender" required>
+                                    Jenis Kelamin : 
+                                    <input type="radio" id="male" name="gender" value="male">
+                                    <label for="male">Laki-laki</label>
+                                    <input type="radio" id="female" name="gender" value="female">
+                                    <label for="female">Perempuan</label>
+                                </label> 
+                                <br />
+                            </td>
+                        </tr>
 
-                <input type="radio" id="male" name="gender" value="male" />
-                <label for="male">Laki-laki</label>
-                <input type="radio" id="female" name="gender" value="female" /> 
-                <label for="female">Perempuan</label>
+                        <tr>
+                            <td>
+                                Pesan : <br />
+                                <textarea placeholder="Silahkan isi pesan anda..." name="messages" rows="4" cols="50"></textarea>
+                                <br />
+                            </td>
+                        </tr>
 
-                <label for="msg">Pesan</label>
-                <textarea id="msg" rows="4" columns="50"></textarea>
-                <button id="submit">Kirim</button>
-            </form>
+                        <tr>
+                            <td>
+                                <button id="kirim" type="submit">Kirim</button>
+                                <!--<input type="submit" value="Submit">-->
+                            </td>
+                        </tr>
 
-            <div class="output">
-                <!-- add output-->
-                <p id="error-name"></p>
+                        <script src="js/script.js"></script>
+                    </table>
+                </form>
+
+                <div class="output">
+                    <!-- add output-->
+                    <p id="error-name">
+                        <h4> Isi dari pesan anda : </h4>
+                        <div>
+                            <p>Nama : <span id="sender-full-name"></span></p>
+                            <p>Tanggal Lahir : <span id="sender-birth-date"></span></p>
+                            <p>Nama : <span id="sender-gender"></span></p>
+                            <p>Pesan : <span id="sender-messages"></span></p>
+                        </div>
+                    </p>
+                </div>
             </div>
         </div>
     </main>
