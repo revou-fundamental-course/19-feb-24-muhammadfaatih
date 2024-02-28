@@ -7,6 +7,13 @@ body {
     font-family: 'Gill Sans', 'Times New Roman', 'Calibri';
 }
 
+hr {
+    padding-bottom: 10px;
+    background-color: orange;
+    border-color: orange;
+    border-radius: 16px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
@@ -54,20 +61,6 @@ header {
     gap: 1rem 2rem;
 }
 
-.navigation {
-    list-style-type: none;
-}
-
-.navigation li {
-    display: inline;
-    margin-right: 10px;
-}
-
-/*.home h3 {
-    font-style:normal;
-}
-*/
-
 .our-product {
     display: flex;
     justify-content:space-between;
@@ -107,8 +100,8 @@ p {
 }
 
 .card {
-    box-shadow: 0 2px 2px 0 #ff0000;
-    border-radius: 2px;
+    box-shadow: 0 2px 6px 0 orange;
+    border-radius: 4px;
     padding: 10px;
 }
 
@@ -125,6 +118,7 @@ nav li {
     /*display: inline;*/
     list-style-type: none;
     margin-right: 20px;
+    
 }
 
 nav ul {
@@ -136,10 +130,16 @@ nav ul {
 nav {
     /*background-color: #A7D397;*/
     padding: 1px;
+    text-align: center;
+    border: 5px solid orange;
+    border-radius: 24px;
+
+    background-color: orange;
+    padding: 5px;
+    
     position: sticky;
     top: 0;
-    text-align: center;
-    border: 5px solid white;
+    z-index: 9999;
 }
 
 nav a {
@@ -156,7 +156,31 @@ nav a:hover {
     /*text-decoration: underline;*/
 }
 
-@media only screen and (max-width: 650px) {
+table {
+    background-color: white;
+    border: black;
+}
+
+td, tr {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 16px;
+    text-align: left;
+    padding: 8px;
+    /*background-color: #f2f2f2*/
+}
+
+footer {
+    /*color: white;*/
+    padding: 20px;
+    background-color: orange;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 800px) {
     .header-wrapper {
         flex-direction: column;
     }
@@ -170,8 +194,46 @@ nav a:hover {
         margin-bottom: 1px;
     }
 
-    .circle-image {
-        display: flex;
+    .circle-image, .message-box {
+        width: 100%;
         flex-direction: column;
+        align-self: stretch;
+    }
+
+    .space {
+        padding-top: 50px;
+    }
+
+    .msg_us {
+        text-align: center;
+        font-weight: bolder;
+    }
+
+    .our-product {
+        display: inline;
+    }
+}
+
+@media only screen and (max-width: 1045px) {
+    .logo {
+        margin-bottom: 1px;
+    }
+
+    .circle-image, .message-box {
+        width: 100%;
+        flex-direction: column;
+        align-self: stretch;
+    }
+
+    .space {
+        padding-top: 50px;
+    }
+
+    .msg_us {
+        text-align: center;
+    }
+
+    .our-product {
+        display: inline;
     }
 }
