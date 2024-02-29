@@ -95,8 +95,12 @@ header {
 }
 
 p {
-    text-indent: 20px;
     text-align: justify;
+}
+
+h5 {
+    text-align: center;
+    padding-bottom: 50px;
 }
 
 .card {
@@ -107,15 +111,11 @@ p {
 
 .banner {
     width: 100%;
-    /*width: 300px;*/
-    /*max-height: 300px;*/
-    /*height: 500px;*/
     object-fit: cover;
     object-position: center;
 }
 
 nav li {
-    /*display: inline;*/
     list-style-type: none;
     margin-right: 20px;
     
@@ -128,7 +128,6 @@ nav ul {
 }
 
 nav {
-    /*background-color: #A7D397;*/
     padding: 1px;
     text-align: center;
     border: 5px solid orange;
@@ -153,7 +152,6 @@ nav a {
 nav a:hover {
     font-weight: bold;
     color: #ff0000;
-    /*text-decoration: underline;*/
 }
 
 table {
@@ -169,11 +167,9 @@ td, tr {
     border-radius: 16px;
     text-align: left;
     padding: 8px;
-    /*background-color: #f2f2f2*/
 }
 
 footer {
-    /*color: white;*/
     padding: 20px;
     background-color: orange;
     text-align: center;
@@ -213,6 +209,14 @@ footer {
     .our-product {
         display: inline;
     }
+
+    footer > p {
+        text-align: center;
+    }
+
+    p {
+        text-indent: 20px;
+    }
 }
 
 @media only screen and (max-width: 1045px) {
@@ -237,5 +241,9 @@ footer {
 
     .our-product {
         display: inline;
+    }
+
+    p {
+        text-indent: 20px;
     }
 }
